@@ -25,3 +25,6 @@
 
 ## 参考: 公式ドキュメント
 - [算出プロパティとウォッチャ](https://jp.vuejs.org/v2/guide/computed.html)
+
+## 解答例
+
