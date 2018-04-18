@@ -40,10 +40,6 @@ $ touch template.html
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
   </head>
   <body>
-    <div id="app"></div>
-    <script>
-      new Vue({}).$mount('#app')
-    </script>
   </body>
 </html>
 ```
