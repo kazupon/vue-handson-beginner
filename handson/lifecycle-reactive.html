@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Vue Hands-on: ライフサイクルとリアクティブシステム</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+  </head>
+  <body>
+    <h1>Vue Hands-on: ライフサイクルとリアクティブシステム</h1>
+
+    <div id="app">
+      <p>{{ message }}</p>
+    </div>
+
+    <script>
+      new Vue({
+        el: '#app',
+        data: {
+          message: 'Hello World!'
+        },
+        watch: {
+          message (val, oldVal) {
+            console.log(`messageの監視: ${val}, ${oldVal}`)
+          }
+        },
+        mounted () {
+          setTimeout(() => {
+            this.message = 'こんにちは、世界！'
+          }, 2000)
+        }
+      })
+    </script>
+  </body>
+</html>

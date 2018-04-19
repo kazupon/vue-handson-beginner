@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Vue Hands-on: フォーム</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+  </head>
+  <body>
+    <h1>Vue Hands-on: フォーム</h1>
+
+    <div id="app">
+      <label>メッセージ:<input type="text" v-model="message"></label>
+      <p v-text="message"></p>
+    </div>
+
+    <script>
+      const vm = new Vue({
+        el: '#app',
+        data: {
+          message: ''
+        }
+      })
+    </script>
+  </body>
+</html>

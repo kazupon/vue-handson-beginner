@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Vue Hands-on: クラスとスタイル</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+  </head>
+  <body>
+    <h1>Vue Hands-on: クラスとスタイル</h1>
+
+    <div id="app">
+      <h2 v-bind:class="{ message: hasMessage }" v-bind:style="messageStyle">{{ message }}</h2>
+    </div>
+
+    <script>
+      new Vue({
+        el: '#app',
+        data: {
+          message: 'Hello World!',
+          hasMessage: true,
+          messageStyle: {
+            color: 'white',
+            backgroundColor: 'red'
+          }
+        }
+      })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Vue Hands-on: 算出プロパティとウォッチャ (メソッドのケース)</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+  </head>
+  <body>
+    <h1>Vue Hands-on: 算出プロパティとウォッチャ (メソッドのケース)</h1>
+
+    <div id="app">
+      <label>苗字:<input type="text" v-model="firstName"></label>
+      <label>名前:<input type="text" v-model="lastName"></label>
+      <p>氏名: {{ fullName() }}</p>
+    </div>
+
+    <script>
+      const vm = new Vue({
+        el: '#app',
+        data: {
+          firstName: '',
+          lastName: ''
+        },
+        methods: {
+          fullName () {
+            return `${this.firstName} ${this.lastName}`
+          }
+        }
+      })
+    </script>
+  </body>
+</html>

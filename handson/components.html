@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Vue Hands-on: コンポーネント</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+  </head>
+  <body>
+    <h1>Vue Hands-on: コンポーネント</h1>
+    <div id="app">
+      <label>タスク: <input type="text" v-model.trim="task" v-on:keyup.enter="addTodo" placeholder="タスクを追加"></label>
+      <h2>登録されたタスク一覧</h2>
+      <ul>
+        <li v-for="(todo, index) in todos">
+          <todo-item v-bind:key="index" v-bind:name="todo.name" v-model="todo.done" v-on:remove="removeTodo(index)" />
+        </li>
+      </ul>
+    </div>
+    <script>
+      Vue.component('todo-item', {
+        template: `
+          <label>
+            <input type="checkbox" v-bind:value="done" v-on:change="changeTodo">
+            <del v-if="done">{{ name }}</del>
+            <span v-else>{{ name }}</span>
+            <button v-on:click="$emit('remove')">削除</button>
+          </label>
+        `,
+        props: {
+          name: {
+            type: String
+          },
+          done: {
+            type: Boolean,
+            default: false
+          }
+        },
+        model: {
+          prop: 'done',
+          event: 'change'
+        },
+        methods: {
+          changeTodo (e) {
+            this.$emit('change', e.target.checked)
+          }
+        }
+      })
+
+      const vm = new Vue({
+        el: '#app',
+        data: {
+          task: '',
+          todos: []
+        },
+        methods: {
+          addTodo () {
+            if (!this.task) { return }
+            this.todos.push({
+              name: this.task,
+              done: false
+            })
+            this.task = ''
+          },
+          removeTodo (index) {
+            this.todos.splice(index, 1)
+          }
+        }
+      })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Vue Hands-on: ディレクティブ</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+  </head>
+  <body>
+    <h1>Vue Hands-on: ディレクティブ</h1>
+    
+    <div id="app">
+      <label>メッセージ:<input type="text" v-on:input="onInput" v-bind:value="message"></label>
+      <p v-text="message"></p>
+    </div>
+
+    <script>
+      const vm = new Vue({
+        el: '#app',
+        data: {
+          message: ''
+        },
+        methods: {
+          onInput (e) {
+            this.message = e.target.value
+          }
+        }
+      })
+    </script>
+  </body>
+</html>
