@@ -5,7 +5,7 @@
 - HTMLのstyleのバインディング
 
 ## 演習内容
-[最初に作成](./hello-world.md)した`Hello World!`を表示するアプリケーションに、`<p>`タグに以下のクラスとスタイルを適用して見た目を変えてみましょう。
+[最初に作成](./hello-world.md)した`Hello World!`を表示するアプリケーションに、このメッセージを表示しているタグに以下のクラスをアクティブにし、インラインスタイルを適用して見た目を変えてみましょう。
 
 - class: `message`
 - style: `color: white; background-color: red;`
