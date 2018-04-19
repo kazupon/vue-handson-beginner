@@ -28,4 +28,10 @@
 - [算出プロパティとウォッチャ](https://jp.vuejs.org/v2/guide/computed.html)
 
 ## 解答例
-
+- 最初のステップ
+  - <answer-link url="/examples/computed-watcher-first-step.html">こちらを参照</answer-link>
+- いくつかのケース
+  - <answer-link url="/examples/computed-watcher-by-method.html">メソッド</answer-link>
+  - <answer-link url="/examples/computed-watcher-by-computed.html">算出プロパティ</answer-link>
+  - <answer-link url="/examples/computed-watcher-by-watch.html">監視プロパティ</answer-link>
+  - <answer-link url="/examples/computed-watcher-by-watcher.html">ウォッチャ</answer-link>

@@ -20,4 +20,4 @@ Chrome DevToolsのコンソールで`vm.message = '...'`にようしてVueイン
 - [API - ディレクティブ](https://jp.vuejs.org/v2/api/#%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%86%E3%82%A3%E3%83%96)
 
 ## 解答例
-
+- <answer-link url="/examples/directive.html">こちらを参照</answer-link>

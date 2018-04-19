@@ -12,4 +12,4 @@
 - [テンプレート構文 - テキスト](https://jp.vuejs.org/v2/guide/syntax.html#%E3%83%86%E3%82%AD%E3%82%B9%E3%83%88)
 
 ## 解答例
-
+- <answer-link url="/examples/hello-world.html">こちらを参照</answer-link>

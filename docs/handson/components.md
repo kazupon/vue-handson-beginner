@@ -10,4 +10,4 @@
 - [コンポーネント](https://jp.vuejs.org/v2/guide/components.html)
 
 ## 解答例
-
+- <answer-link url="/examples/components.html">こちらを参照</answer-link>
